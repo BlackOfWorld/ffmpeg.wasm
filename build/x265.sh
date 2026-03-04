@@ -32,6 +32,8 @@ FLAGS_MAIN=(
 )
 
 cd source
+sed -i.bak '/-march/d' dynamicHDR10/CMakeLists.txt
+sed -i.bak '/-march/d' CMakeLists.txt
 rm -rf build
 mkdir -p build
 cd build
